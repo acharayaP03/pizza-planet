@@ -1,15 +1,25 @@
 <template>
     <header>
-        <nav class="navnbar navbar-togggleabe-md navbar-light">
+        <nav class="navbar navbar-expand-lg navbar navbar-light">
             <a href="/" class="navbar-brand">PIZZA PLANET</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="" class="nav-link">home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">menu</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a href="" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">menu</a>
+                    </li>
+                </ul>
+            </div> 
         </nav>
     </header>
 </template>
+<style>
+    header{
+        margin-bottom: 20px;
+    }
+    .navbar-brand{
+        font-size: 1.5em;
+    }
+</style>
