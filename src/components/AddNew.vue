@@ -46,7 +46,10 @@
     </form>
 </template>
 <script>
+import { dbMenuRef } from '../firebase.config';
+
 export default {
+    
     name: 'AddNew',
     data(){
         return{
@@ -65,7 +68,7 @@ export default {
     },
     methods:{
         addNewItem(){
-            console.log(this.newPizza);
+            dbMenuRef.push(this.newPizza);
         }
     }
 }

@@ -30,7 +30,7 @@
                         <th>Total</th>
                     </tr>
                 </thead>
-                <tbody v-for="item in basket">
+                <tbody v-for="item in basket" :key="item" >
                     <tr>
                     <td>
                         <button class="btn btn-sm btn-outline-danger"

@@ -53,13 +53,21 @@
             </table>
         </div>
     </div>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-lg-6">
+            <pp-login></pp-login>
+        </div>
+    </div>
 </div>
 </template>
 <script>
-import AddNew from './AddNew'
+import AddNew from './AddNew';
+import Login from './Login'
 export default {
     components:{
-        ppAddNew: AddNew
+        ppAddNew: AddNew,
+        ppLogin : Login
     }
 }
 </script>
