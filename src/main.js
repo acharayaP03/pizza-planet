@@ -19,7 +19,10 @@ const routes =[
   }
 ]
 const router = new VueRouter({
-  routes
+  //history mode takes advantage of html5 history api.
+  //this allows us to load url without refreshing page. 
+  routes,
+  mode: 'history'
 })
 new Vue({
   el: '#app',
