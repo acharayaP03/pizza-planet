@@ -4,7 +4,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto">
                     <router-link to="/" tag="li"><a href="" class="nav-link">home</a></router-link>
-                    <router-link to="/menu" tag="li"><a href="" class="nav-link">menu</a></router-link>
+                    <router-link to="/about" tag="li"><a href="" class="nav-link">about</a></router-link>
                     <router-link to="/admin" tag="li"><a href="" class="nav-link">admin</a></router-link>
                 </ul>
             </div>
