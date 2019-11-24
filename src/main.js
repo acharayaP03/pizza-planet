@@ -16,6 +16,11 @@ const routes =[
   {
     path: '/menu',
     component: Menu
+  },
+  //redirect to the root or 404 if url doesnt match
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 const router = new VueRouter({
