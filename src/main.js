@@ -18,14 +18,18 @@ Vue.use(VueRouter)
 const routes =[
   {
     path: '/',
+    //named routes
+    name: 'homeLink',
     component: Home
   },
   {
     path: '/menu',
+    name: 'menuLink',
     component: Menu
   },
   {
     path: '/admin',
+    name: 'adminLink',
     component: Admin
   },
   {
@@ -33,18 +37,22 @@ const routes =[
     component: About, children: [
       {
         path: '/contact',
+        name: 'contactLink',
         component: Contact
       },
       {
         path: '/history',
+        name: 'historLink',
         component: History
       },
       {
         path: '/delivery',
+        name: 'deliveryLink',
         component: Delivery
       },
       {
         path: '/ordering',
+        name: 'orderingLink',
         component: Ordering
       }
     ]
