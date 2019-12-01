@@ -30,7 +30,10 @@ const routes =[
   {
     path: '/admin',
     name: 'adminLink',
-    component: Admin
+    component: Admin, beforeEnter:(to, from, next) =>{
+      alert('This area is for authorised users only, pleae login to contine.');
+      next();
+    }
   },
   {
     path: '/about',
