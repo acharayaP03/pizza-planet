@@ -68,6 +68,18 @@ export default {
     components:{
         ppAddNew: AddNew,
         ppLogin : Login
+    },
+    data(){
+        return{
+            name: 'Trishten'
+        }
+    },
+    beforeRouteLeave: (to, from, next)=>{
+       if(confirm('Have you rememberd to log out') === true){
+           next()
+       }else{
+           next(false)
+       }
     }
 }
 </script>

@@ -16,12 +16,6 @@
 import Header from './components/Header';
 import Footer from "./components/Footer";
 export default {
-    name: 'app', 
-    data(){
-        return{
-
-        }
-    },
     components:{
         ppHeader: Header,
         ppFooter: Footer,
