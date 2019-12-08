@@ -59,47 +59,14 @@ export default {
             //to add items, we set it as a empty array.
             basket:[],
             basketText: 'No item selecdted',
-            getMenuItems:{
-                1: {
-                    id: 1,
-                    'name': 'Margherita',
-                    'description': 'A delicious tomato based pizza topped with mozzarella',
-                    'options': [{
-                        'size': 9,
-                        'price': 6.95
-                    }, {
-                        'size': 12,
-                        'price': 10.95
-                    }]
-                    },
-                    2: {
-                        id: 2,
-                        'name': 'Pepperoni',
-                        'description': 'A delicious tomato based pizza topped with mozzarella and pepperoni',
-                        'options': [{
-                            'size': 9,
-                            'price': 7.95
-                        }, {
-                            'size': 12,
-                            'price': 12.95
-                        }]
-                    },
-                    3: {
-                        id: 3,
-                        'name': 'Ham and Pineapple',
-                        'description': 'A delicious tomato based pizza topped with mozzarella, ham and pineapple',
-                        'options': [{
-                            'size': 9,
-                            'price': 7.95
-                        }, {
-                            'size': 12,
-                            'price': 12.95
-                        }]
-                }
-
-            }
         }
     },
+    computed:{
+        getMenuItems(){
+            return this.$store.getters.getMenuItems
+        }
+    }
+    ,
     methods:{
         addToBasket(item, option){
             this.basket.push({
