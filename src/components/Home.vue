@@ -11,9 +11,6 @@
 </template>
 <script>
     export default{
-        data(){
-
-        },
         methods:{
             goToMenu(e){
                 this.$router.push({ name : 'menuLink'})

@@ -17,7 +17,7 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody v-for="item in getMenuItems" :key="item">
+                <tbody v-for="item in getMenuItems">
                     <tr>
                         <td>{{ item.name }}</td>
                         <td><button class="btn btn-outline-danger btn-sm">X</button></td>

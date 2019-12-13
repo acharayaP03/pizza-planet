@@ -9,11 +9,11 @@
                         <th>Add to Basket</th>
                     </tr>
                 </thead>
-                <tbody v-for="item in getMenuItems" :key="item.id">
+                <tbody v-for="item in getMenuItems">
                     <tr>
                         <td><strong>{{item.name}}</strong></td>
                     </tr>
-                    <tr v-for="option in item.options" :key="option">
+                    <tr v-for="option in item.options">
                         <td>{{ option.size}}</td>
                         <td>{{ option.price }}</td>
                         <td><button class="btn btn-sm btn-outline-success" @click="addToBasket(item, option)">+</button></td>
@@ -30,7 +30,7 @@
                         <th>Total</th>
                     </tr>
                 </thead>
-                <tbody v-for="item in basket" :key="item" >
+                <tbody v-for="item in basket">
                     <tr>
                     <td>
                         <button class="btn btn-sm btn-outline-danger"
@@ -45,10 +45,11 @@
                 </tbody>
             </table>
             <p>Order Total</p>
-            <button class="btn btn-success btn-block">Place Order</button>
+            <button class="btn btn-success btn-block" @click="addNewOrder">Place Order</button>
         </div>
         <div v-else>
             <p>{{ basketText }}</p>
+            {{ this.$store.state.orders}}
         </div>
     </div>
 </template>
@@ -87,6 +88,11 @@ export default {
             if(item.quantity === 0){
                 this.removeFromBasket(item);
             }
+        },
+        addNewOrder(){
+            this.$store.commit('addOrder', this.basket);
+            this.basket = [];
+            this.basketText = 'Thank you, your order has been placed.'
         }
     }
 }
